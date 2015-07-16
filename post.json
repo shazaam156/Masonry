@@ -1,0 +1,14 @@
+{
+	"charttitle": "EXPO-APP",
+	"chart_yaxis": "y axis",
+
+	"chartCategories":
+		["Chennai", "coimabtore", "Tiruour", "kodaikanal", "Trichy"],
+		
+	"chartSeries":
+							[
+								{ "name": "xpo1", "data": [1,2,3,4,5]},
+								{ "name": "xpo2", "data": [6,7,8,9,10]}
+								
+							]	
+}

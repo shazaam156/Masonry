@@ -1,0 +1,27 @@
+<form name="popoverForm" ng-controller="navcntrl"style=" width: 250px;">
+  <p ng-bind-html-unsafe="popover.content"></p>
+
+	<div class="form-actions" >
+
+		<div style="overflow-x:auto;height: 180px;">
+		
+		<p><img src="static/angular1/img/plus.png" style="height:18px;width:20px;">Projects</p>
+	
+		<div ng-repeat="project in projects | filter:search" >
+		  
+        
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ui-sref="app.shiftphasedates({ project_id:id})">{{ project.project_name }}</a>
+			
+		</div>
+		</br>
+		
+		<p><img src="static/angular1/img/user.png" style="height:18px;width:20px;">Person</p>
+		<div ng-repeat="person in persons | filter:search" >
+		  
+        
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a ui-sref="app.user({ user_id:id})">{{ person.first_name }}  {{ person.last_name }}</a>
+		</div>
+		</div>
+
+	</div>
+</form>

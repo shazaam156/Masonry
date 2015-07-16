@@ -1,0 +1,39 @@
+<div class="" ng-controller="subadmincompany">
+  
+
+	
+          <div class="panel-heading font-bold">
+		 
+		   <h4>&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/labtest.png" style="height:64px;width:64px;">&nbsp;&nbsp;Laboratory List</h4>
+          <div class="panel-body">
+            
+
+			 
+			  <div  ng-repeat="user in adduser"> 
+			  
+					<div class="col-md-2" style="margin:30px;text-align:center;" ng-if='user.status=="In the Office"'>
+					
+						<a  ui-sref="app.Preference.employeeui.lablist" ><img src="{{ user.imagepath }}" style="height:85px; width:85px;">
+						<br>
+						<p  style="font-weight:700;display: initial;text-align:center;">{{ user.firstname }}</p></a>
+					</div>
+					
+					</div>
+					
+				
+		
+			  
+            
+             
+			
+			
+			  
+			  
+			  
+				
+				
+             </div> 
+
+
+			 </div>
+		

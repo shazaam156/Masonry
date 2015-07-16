@@ -1,0 +1,130 @@
+<!-- first -->
+<ul class="nav" ng-controller="pagenavigation">
+
+ 
+
+  <li ng-class="{active:$state.includes('app.ui1')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text font-bold"></i>
+        <i class="fa fa-fw fa-angle-down text-active font-bold"></i>
+      </span>
+      <i class="icon-users  icon"></i>
+      <span class="font-bold">Menu 1</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span class="font-bold">Menu 1</span>
+        </a>
+      </li>
+ 
+      <li ui-sref-active="active">
+        <a ui-sref="app.ui1.Menu1_A">
+          <span class="font-bold">Menu 1-A</span>
+        </a>
+      </li>
+
+
+
+    </ul>
+  </li>
+  
+
+
+  
+    <li ng-class="{active:$state.includes('app.ui2')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text font-bold"></i>
+        <i class="fa fa-fw fa-angle-down text-active font-bold"></i>
+      </span>
+      <i class="icon-user-following  icon"></i>
+      <span class="font-bold">Menu 2</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span class="font-bold">Menu 2</span>
+        </a>
+      </li>
+ 
+      <li ui-sref-active="active">
+        <a ui-sref="app.ui2.Menu2_A">
+          <span class="font-bold">Menu 2-A</span>
+        </a>
+      </li>
+   <li ui-sref-active="active">
+        <a ui-sref="app.ui2.Menu2_B">
+          <span class="font-bold">Menu 2-A</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+
+  
+    <li ng-class="{active:$state.includes('app.ui3')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text font-bold"></i>
+        <i class="fa fa-fw fa-angle-down text-active font-bold"></i>
+      </span>
+      <i class="icon-calendar  icon"></i>
+      <span class="font-bold">Menu 3</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span class="font-bold">Menu 3</span>
+        </a>
+      </li>
+ 
+      <li ui-sref-active="active">
+        <a ui-sref="app.ui3.Menu3_A">
+          <span class="font-bold">Menu 3-A</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.ui3.Menu3_B">
+          <span class="font-bold">Menu 3-B</span>
+        </a>
+      </li>   </ul>
+  </li>
+  
+
+  
+  
+    <li ng-class="{active:$state.includes('app.ui4')}">
+    <a href class="auto">
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text font-bold"></i>
+        <i class="fa fa-fw fa-angle-down text-active font-bold"></i>
+      </span>
+      <i class="fa fa-flask (alias)  icon"></i>
+      <span class="font-bold">Menu 4</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span class="font-bold">Menu 4</span>
+        </a>
+      </li>
+ 
+      <li ui-sref-active="active">
+        <a ui-sref="app.ui4.Menu4_A">
+          <span class="font-bold">Menu 4-A</span>
+        </a>
+      </li>
+    <li ui-sref-active="active">
+        <a ui-sref="app.ui4.Menu4_B">
+          <span class="font-bold">Menu 4-B </span>
+        </a>
+      </li>   </ul>
+  </li>
+  
+
+  
+ 
+</ul>
+<!-- / third -->

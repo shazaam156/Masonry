@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+  <meta charset="utf-8" />
+  <title>Masonry</title>
+  <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="js/jquery/select2/select2.css" type="text/css" />
+  <link rel="stylesheet" href="js/jquery/select2/select2-bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="js/jquery/probar/pro-bars.min.css" rel="stylesheet" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/image-crop-styles.css" type="text/css" />
+  <link rel="stylesheet" href="css/lightbox-form.css" type="text/css" />
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css" type="text/css" />
+
+
+
+               
+  
+  <link rel="stylesheet" href="css/dhtmlxgantt.css" type="text/css" />
+
+
+  <style>
+  .radio, .checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.radio, .checkbox {
+  min-height: 20px;
+  padding-left: 20px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(119, 119, 119, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color:#fff;
+    border-width: 1px;
+    border-radius: 4px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(119, 119, 119, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(85, 85, 85, 1);
+    background-color: rgba(231, 231, 231, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #888;
+}
+</style>
+
+ <style type="text/css">
+    
+        .label
+        {
+            font-family: Verdana;
+            font-size: medium;
+            font-weight: bold;
+            color: #000000;
+        }
+        .click
+        {
+            font-family: Verdana;
+            font-size: medium;
+            font-weight: bold;
+            color: #000000;
+            padding:10px;
+        }
+    
+        .Title
+        {
+            font-family: Verdana;
+            font-size: large;
+            font-weight: bold;
+            color: #FF9900;
+        }
+    
+        #Button1
+        {
+            width: 64px;
+             font-family: Verdana;
+            font-size: medium;
+            font-weight: bold;
+            background-color:Teal;
+            color:#FFF;
+        }
+      .black_overlay{
+            display: none;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index:1001;
+            -moz-opacity: 0.6;
+            opacity:.60;
+            filter: alpha(opacity=60);
+        }
+        .white_content {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 25%;
+            width: 50%;
+           
+            padding: 16px;
+           
+            background-color: white;
+            z-index:1002;
+            overflow: auto;
+            border-radius:10px;
+           
+        }
+		.normaltrack
+		{
+		color: #000;
+		  font-weight: 500;
+		  font-size: 24px;
+		}
+        
+		.selectedtrack
+		{
+		color: #000;
+		  font-weight: 600;
+		  font-size: 24px;
+		}
+	
+.input11{
+  border-radius: 2px;
+  color: #000000;
+  background-color: #f5f5f5;
+  height: 26px;
+  width: 77px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  padding-left: 0px;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  margin-right: 10px;
+  text-align:center;
+  }
+  
+.select_fontlight
+{
+color: #000;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.select_fontdark
+{
+color: #000;
+  font-weight: 600;
+  font-size: 14px;
+}  
+
+				
+
+.tile1{
+border-radius:5px;
+padding: 5px 15px;
+background: rgba(62,204,247,1);
+background: -moz-linear-gradient(top, rgba(62,204,247,1) 0%, rgba(0,137,196,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(62,204,247,1)), color-stop(100%, rgba(0,137,196,1)));
+background: -webkit-linear-gradient(top, rgba(62,204,247,1) 0%, rgba(0,137,196,1) 100%);
+background: -o-linear-gradient(top, rgba(62,204,247,1) 0%, rgba(0,137,196,1) 100%);
+background: -ms-linear-gradient(top, rgba(62,204,247,1) 0%, rgba(0,137,196,1) 100%);
+background: linear-gradient(to bottom, rgba(62,204,247,1) 0%, rgba(0,137,196,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccf7', endColorstr='#0089c4', GradientType=0 );
+	}
+
+.tile2{
+border-radius:5px;
+padding: 5px 15px;
+background: rgba(173,173,173,1);
+background: -moz-linear-gradient(top, rgba(173,173,173,1) 0%, rgba(50,51,51,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(173,173,173,1)), color-stop(100%, rgba(50,51,51,1)));
+background: -webkit-linear-gradient(top, rgba(173,173,173,1) 0%, rgba(50,51,51,1) 100%);
+background: -o-linear-gradient(top, rgba(173,173,173,1) 0%, rgba(50,51,51,1) 100%);
+background: -ms-linear-gradient(top, rgba(173,173,173,1) 0%, rgba(50,51,51,1) 100%);
+background: linear-gradient(to bottom, rgba(173,173,173,1) 0%, rgba(50,51,51,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#adadad', endColorstr='#323333', GradientType=0 );
+	}
+	
+	
+    </style>
+
+	
+
+						<style>
+				
+            .today1 {
+                background: #E3F2FF;
+            }
+            
+            .different-month1 {
+                color:#C0C0C0;
+            }
+            
+            .selected1 {
+				background: #2875c7;
+				  color: white;
+            }
+			.calendar {
+			  float: left;
+			  display: block;
+			  box-sizing: border-box;
+			  -moz-box-sizing: border-box;
+			  background: white;
+			  width: 300px;
+			  border: solid 1px #cccccc;
+			  margin-bottom: 10px;
+
+            }
+			.header {
+			  float: left; 
+			  width: 100%; 
+			  background: #2875c7;  
+			  height: 40px;  
+			  color:white;
+
+            }			
+			.week {
+			  float: left;
+			  width: 100%;
+			  border-top: solid 1px #cccccc;
+
+            }			
+			.days {
+					  border-left: none;color: #2875c7;
+					  font-weight: bold;
+					  float: left;
+					  width: 14.28571429%;
+					  box-sizing: border-box;
+					 -moz-box-sizing: border-box;
+					  border-left: solid 1px #cccccc;
+					  font-size: 0.75em;
+					  text-align: center;
+					  height: 30px;
+					  line-height: 30px !important;
+					  display: inline-block;
+					  vertical-align: middle;
+					  background: white;
+					  cursor: pointer;
+
+            }			
+			
+			.weekdays {
+				float: left;
+				  width: 100%;
+				  border-top: solid 1px #cccccc;
+
+            }			
+			
+			.ff {
+				  color: #C0C0C0;
+				  border-left: none;
+				  float: left;
+				  width: 14.28571429%;
+				  box-sizing: border-box;
+				  -moz-box-sizing: border-box;
+				  border-left: solid 1px #cccccc;
+				  font-size: 0.95em;
+				  text-align: center;
+				  height: 30px;
+				  line-height: 30px !important;
+				  display: inline-block;
+				  vertical-align: middle;
+				 //background: white;
+				  cursor: pointer;
+
+
+            }
+				
+				</style>
+  
+</head>
+<body ng-controller="AppCtrl">
+  <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded}" ui-view></div>
+  <!-- jQuery -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/jquery/jquery.masonry.min.js"></script>
+
+
+
+
+		
+	
+	
+  <script src="js/angular/angular.min.js"></script> 
+  <script src="js/angular/restangular.min.js"></script>
+  <script src="js/angular/angular-cookies.min.js"></script>
+  <script src="js/angular/angular-animate.min.js"></script>
+
+
+  <script src="js/angular/angular-ui-router.min.js"></script>
+  <script src="js/angular/angular-translate.js"></script>
+  <script src="js/angular/ngStorage.min.js"></script>
+  <script src="js/angular/ui-load.js"></script>
+  <script src="js/angular/ui-jq.js"></script>
+  <!-- <script src="js/angular/ui-validate.js"></script> -->
+  <script src="js/angular/ui-bootstrap-tpls.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="js/datetimepicker.js"></script>
+  <script src="js/angular/lightbox-form.js"></script> 
+<script src="js/jquery/select2/select2.min.js"></script> 
+  <script src="https://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+
+ <script src="js/modules/ui-select2.js"></script> 
+<script src="js/angular/image-crop.js"></script> 
+ <script src="js/modules/bootstrap.min.js"></script> 
+ <script src="js/modules/bootstrap-editable.js"></script> 
+ <script src="js/modules/fastclick.min.js"></script> 
+ <script src="js/modules/prettify.js"></script> 
+  <script src="js/jquery/probar/appear.min.js"></script> 
+
+<script src="js/jquery/probar/visible.min.js"></script> 
+   <script src="js/angular-resource.js"></script> 
+  <script src="js/underscore-min.js"></script>
+  <script src="js/angular/moment.js"></script> 
+  <script src="js/app/gantt/dhtmlxgantt.js"></script> 
+   <script src="js/angular/highstock.src.js"></script> 
+   <script src="js/angular/highcharts-ng.js"></script> 
+ 
+   <script src="js/angular/angular-masonry.min.js"></script>	
+   <script src="js/angular/ng-infinite-scroll.min.js"></script>	
+
+
+  <script type="text/javascript" src="js/w2ui-1.4.min.js"></script>
+  <!-- App -->
+  <script src="js/app.js"></script>
+
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/controller2.js"></script>
+  
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/angular_starp.js"></script>
+  <script src="js/checklist-model.js"></script>
+ <script src="js/customPopup.js"></script>
+ <script src="js/app.gantt.js"></script>
+
+ <script src="js/factory.js"></script>
+ <script src="js/servicesapp.js"></script>
+  <!-- Lazy loading -->
+</body>
+</html>
